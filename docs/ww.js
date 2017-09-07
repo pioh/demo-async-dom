@@ -157,7 +157,7 @@ function sendBatch() {
 
 var updateTimeout = null
 var packSize = 5;
-var batchTimeout = 400;
+var batchTimeout = 50;
 var asyncBatch = function(action) {
   actionsList.push(action);
 	if (actionsList.length > packSize) {
@@ -212,7 +212,7 @@ function scheduleVisibilityUpdate(id) {
 }
 
 async function _initWebApp() {
-    for (let i = 0; i < 7000; i++) {
+    for (let i = 0; i < 70000; i++) {
         var id = i;
         var style = 'display:inline-block;width:10px;height:10px;transition: background-color 0.5s ease;background-color:' + getRandomColor() + ';';
         var actions = [{
